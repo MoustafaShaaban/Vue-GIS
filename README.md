@@ -23,6 +23,33 @@ A Vue GIS app built using Vue, Quasar and Leaflet
 * Search for features by feature title or description.
 
 
+### Project Review
+
+* Project Review:
+
+![Project Review](./reviews/1-Project-Overview.gif)
+
+* Adding Data:
+
+![Adding Data](./reviews/2-Add-Data.gif)
+
+* Filtering Data:
+
+![Filtering Data](./reviews/3-Filter-Data.gif)
+
+* Sort and Update Data:
+
+![Sort and Update Data](./reviews/4-Sort-and-Update-Data.gif)
+
+* Delete Data and Search for new places:
+
+![Delete Data and Search for new places](./reviews/5-Delete-Data-and-Search-for-places.gif)
+
+
+
+-------------------------------------------------
+
+
 ## Install the dependencies
 ```bash
 yarn
