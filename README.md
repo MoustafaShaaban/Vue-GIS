@@ -1,4 +1,4 @@
-# Vue and Leaflet (vue-and-leaflet)
+# Vue GIS
 
 A Vue GIS app built using Vue, Quasar and Leaflet
 
