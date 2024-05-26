@@ -2,7 +2,7 @@
   "name": "vue-and-leaflet",
   "version": "0.0.1",
   "description": "A GIS app built using Vue, Quasar and Leaflet",
-  "productName": "Vue and Leaflet",
+  "productName": "Vue-GIS",
   "author": "Moustafa Shaaban <Moustafa_Shaaban@zohomail.com>",
   "private": true,
   "scripts": {
