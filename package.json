@@ -1,0 +1,36 @@
+{
+  "name": "vue-and-leaflet",
+  "version": "0.0.1",
+  "description": "A GIS app built using Vue, Quasar and Leaflet",
+  "productName": "Vue and Leaflet",
+  "author": "Moustafa Shaaban <Moustafa_Shaaban@zohomail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.4",
+    "@vueuse/core": "^10.9.0",
+    "leaflet": "^1.9.4",
+    "leaflet-geosearch": "^4.0.0",
+    "leaflet.fullscreen": "^3.0.2",
+    "leaflet.locatecontrol": "^0.81.0",
+    "nanoid": "^5.0.7",
+    "pinia": "^2.0.11",
+    "quasar": "^2.8.0",
+    "vue": "^3.4.18",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.4.3",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.14"
+  },
+  "engines": {
+    "node": "^20 || ^18 || ^16",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
