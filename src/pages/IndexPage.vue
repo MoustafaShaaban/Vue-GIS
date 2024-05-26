@@ -33,11 +33,31 @@ function loadFeatures() {
 }
 
 onMounted(() => {
-  map.value = L.map('map', { maxZoom: 12, minZoom: 2, zoomControl: true, zoom: 1, zoomAnimation: false, markerZoomAnimation: true }).setView([0, 0], 2)
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map.value);
+  })
+
+  const cartoDBDarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+  })
+
+  map.value = L.map(
+    'map',
+    { maxZoom: 12, minZoom: 2, zoomControl: true, zoom: 1, layers: [osm, cartoDBDarkMatter], markerZoomAnimation: true }
+  ).setView([0, 0], 2)
+
+  const baseMaps = {
+    "OpenStreetMap": osm,
+    "CartoDB.DarkMatter": cartoDBDarkMatter,
+  };
+
+  const layerControl = L.control.layers(baseMaps).addTo(map.value);
+
+
 
   loadFeatures()
 
@@ -49,10 +69,6 @@ onMounted(() => {
   map.value.addControl(searchControl);
   L.control.locate().addTo(map.value);
   L.control.fullscreen({ position: 'topright' }).addTo(map.value);
-})
-
-onUpdated(() => {
-  loadFeatures();
 })
 
 
