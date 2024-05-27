@@ -1,6 +1,6 @@
 # Vue GIS
 
-A Vue GIS app built using Vue, Quasar and Leaflet
+A GIS app built using Vue, Quasar and Leaflet
 
 * [Vue.js 3](https://vuejs.org/)
 * [Quasar Framework](https://quasar.dev/)
