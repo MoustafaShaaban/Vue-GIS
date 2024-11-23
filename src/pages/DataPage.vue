@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="">
     <div class="q-pa-md">
       <q-table flat bordered title="Features" :rows="rows" :columns="columns" separator="vertical" row-key="id"
         binary-state-sort>
