@@ -41,7 +41,7 @@
               </q-popup-edit>
             </q-td>
 
-            <q-td key="lng" :props="props">
+            <q-td key="actions" :props="props">
               <q-btn size="sm" color="negative" @click="confirm">Delete</q-btn>
             </q-td>
           </q-tr>
@@ -116,7 +116,7 @@ const columns = [
   { name: 'description', align: 'center', label: 'Description', field: row => row.description, sortable: true },
   { name: 'lat', label: 'Latitude', field: row => row.coordinates.lat },
   { name: 'lng', label: 'Longitude', field: row => row.coordinates.lng },
-  { name: 'delete', label: 'Actions' },
+  { name: 'actions', align: 'left', label: 'Actions' },
 ]
 
 const filterdFeatures = computed(() => {

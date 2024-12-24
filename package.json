@@ -13,7 +13,6 @@
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "@vueuse/core": "^10.9.0",
-    "leaflet": "^1.9.4",
     "leaflet-geosearch": "^4.0.0",
     "leaflet.fullscreen": "^3.0.2",
     "leaflet.locatecontrol": "^0.81.0",
@@ -26,6 +25,7 @@
   "devDependencies": {
     "@quasar/app-vite": "^1.4.3",
     "autoprefixer": "^10.4.2",
+    "leaflet": "^1.9.4",
     "postcss": "^8.4.14"
   },
   "engines": {

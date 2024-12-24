@@ -14,6 +14,11 @@ import * as L from 'leaflet';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import { useFeaturesStore } from 'src/stores/features-store';
 
+// Source: https://cescobaz.com/2023/06/14/setup-leaflet-with-svelte-and-vite/
+import markerIconUrl from "leaflet/dist/images/marker-icon.png";
+import markerIconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
+import markerShadowUrl from "leaflet/dist/images/marker-shadow.png";
+
 const featuresStore = useFeaturesStore();
 
 const { features, map, featureRef } = storeToRefs(featuresStore);
@@ -54,7 +59,10 @@ onMounted(() => {
 
   const layerControl = L.control.layers(baseMaps).addTo(map.value);
 
-
+  L.Icon.Default.prototype.options.iconUrl = markerIconUrl;
+  L.Icon.Default.prototype.options.iconRetinaUrl = markerIconRetinaUrl;
+  L.Icon.Default.prototype.options.shadowUrl = markerShadowUrl;
+  L.Icon.Default.imagePath = ""; // necessary to avoid Leaflet adds some prefix to image path.
 
   loadFeatures()
 
